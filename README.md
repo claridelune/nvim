@@ -1,0 +1,2 @@
+# configNVIM
+readme
