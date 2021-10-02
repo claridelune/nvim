@@ -1,3 +1,4 @@
+require ('packer')
 -- import all settings
 require("settings")
 --require("settings/aesthetic")
@@ -9,10 +10,6 @@ require("keymappings")
 
 -- Config of my Plugins
 require("plugins")
-
-
-
-
 
 
 
