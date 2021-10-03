@@ -11,5 +11,10 @@ return require("packer").startup(
     -- temas
     use {'marko-cerovac/material.nvim', opt = false, as = 'material'}
     use {'navarasu/onedark.nvim'}
+    -- telescope
+    use {
+	'nvim-telescope/telescope.nvim',
+	requires = { {'nvim-telescope/telescope-fzy-native.nvim'} }
+    }
 end
 )
