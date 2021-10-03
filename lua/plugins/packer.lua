@@ -16,5 +16,18 @@ return require("packer").startup(
 	'nvim-telescope/telescope.nvim',
 	requires = { {'nvim-telescope/telescope-fzy-native.nvim'} }
     }
+    use({
+        "glepnir/dashboard-nvim",
+        opt = true,
+        cmd = {
+          "Dashboard",
+          "DashboardChangeColorscheme",
+          "DashboardFindFile",
+          "DashboardFindHistory",
+          "DashboardFindWord",
+          "DashboardJumpMarks",
+          "DashboardNewfile",
+        },
+      })
 end
 )
