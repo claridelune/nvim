@@ -69,6 +69,16 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["dashboard-nvim"] = {
+    commands = { "Dashboard", "DashboardChangeColorscheme", "DashboardFindFile", "DashboardFindHistory", "DashboardFindWord", "DashboardJumpMarks", "DashboardNewfile" },
+    loaded = false,
+    needs_bufread = false,
+    path = "C:\\Users\\camil\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\dashboard-nvim"
+  },
+  kommentary = {
+    loaded = true,
+    path = "C:\\Users\\camil\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\kommentary"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "C:\\Users\\camil\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lualine.nvim"
@@ -77,13 +87,45 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\camil\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\material"
   },
+  ["onedark.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\camil\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\onedark.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "C:\\Users\\camil\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim"
+  },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\camil\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim"
+  },
+  ["popup.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\camil\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\popup.nvim"
+  },
+  ["telescope-fzy-native.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\camil\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope-fzy-native.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\camil\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
+
+-- Command lazy-loads
+time([[Defining lazy-load commands]], true)
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file DashboardFindFile lua require("packer.load")({'dashboard-nvim'}, { cmd = "DashboardFindFile", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file DashboardFindHistory lua require("packer.load")({'dashboard-nvim'}, { cmd = "DashboardFindHistory", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file DashboardFindWord lua require("packer.load")({'dashboard-nvim'}, { cmd = "DashboardFindWord", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file DashboardJumpMarks lua require("packer.load")({'dashboard-nvim'}, { cmd = "DashboardJumpMarks", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file DashboardNewfile lua require("packer.load")({'dashboard-nvim'}, { cmd = "DashboardNewfile", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Dashboard lua require("packer.load")({'dashboard-nvim'}, { cmd = "Dashboard", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file DashboardChangeColorscheme lua require("packer.load")({'dashboard-nvim'}, { cmd = "DashboardChangeColorscheme", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
+time([[Defining lazy-load commands]], false)
+
 if should_profile then save_profiles() end
 
 end)
