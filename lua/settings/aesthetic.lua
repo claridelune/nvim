@@ -42,4 +42,7 @@ wo.cursorline = true
 --o.hidden = true 
 --o.lazyredraw = true
 
+vim.o.expandtab = true
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
 

@@ -1,11 +1,23 @@
 return require("packer").startup(
   function()
     use {"wbthomason/packer.nvim"}
+
     -- Lsp (tengo miedo)
-    use {
+    use {'neovim/nvim-lspconfig'}
+    --[[ use {
         'neovim/nvim-lspconfig',
         config = function() require'plugins.lsp' end
-    }
+    } ]]
+    use{"glepnir/lspsaga.nvim"} -- 1 de 6(?
+    -- use{"kabouzeid/nvim-lspinstall"} -- no me funciono en windows
+    use{"williamboman/nvim-lsp-installer"} --amen
+
+
+    -- coq autocompletado prueba1 
+    use{"ms-jpq/coq_nvim"}
+    use{"ms-jpq/coq.artifacts"}
+    use{"ms-jpq/coq.thirdparty"}
+
     -- dependencias
     use {"nvim-lua/plenary.nvim"}
     use {"nvim-lua/popup.nvim"}

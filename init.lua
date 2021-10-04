@@ -12,6 +12,6 @@ require("keymappings")
 require("plugins")
 
 -- lsp (Lenguage server provider)
-require("lsp")
+-- require("lsp")
 
-
+require("lsp-config")

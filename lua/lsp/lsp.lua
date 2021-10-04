@@ -1,4 +1,4 @@
--- Symbols for autocomplete
+local coq = require "coq"-- Symbols for autocomplete
 vim.lsp.protocol.CompletionItemKind = {
   "   (Text) ", "   (Method)", "   (Function)",
   "   (Constructor)", " ﴲ  (Field)", "[] (Variable)", "   (Class)",
