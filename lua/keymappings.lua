@@ -32,8 +32,8 @@ mapper("n", "<C-k>", "<C-w>k")
 mapper("n", "<C-l>", "<C-w>l")
 
 -- LSP
--- mapper("n", "<Leader>s", ":LspInfo<CR>")
---[[ mapper("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>")
+mapper("n", "<Leader>s", ":LspInfo<CR>")
+mapper("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>")
 mapper("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>")
 mapper("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>")
 mapper("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>")
@@ -49,7 +49,7 @@ mapper("n", "<space>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
 mapper("n", "[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>")
 mapper("n", "]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>")
 mapper("n", "<space>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>")
-mapper("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>") ]]
+mapper("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>")
 
 -- Plugins Mappings ↓
 
