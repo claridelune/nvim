@@ -1,6 +1,11 @@
 return require("packer").startup(
   function()
     use {"wbthomason/packer.nvim"}
+    -- Lsp (tengo miedo)
+    use {
+        'neovim/nvim-lspconfig',
+        config = function() require'plugins.lsp' end
+    }
     -- dependencias
     use {"nvim-lua/plenary.nvim"}
     use {"nvim-lua/popup.nvim"}
@@ -29,5 +34,10 @@ return require("packer").startup(
           "DashboardNewfile",
         },
       })
+    --plugins para probar despues
+    --use {'godlygeek/tabular'; opt = true; cmd = {'Tabularize'}};
+    --use {'inkarkat/vim-UnconditionalPaste', opt = true}
+    --use{'lewis6991/gitsigns.nvim'}
+    --
 end
 )
