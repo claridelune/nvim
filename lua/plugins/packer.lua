@@ -14,9 +14,9 @@ return require("packer").startup(
 
 
     -- coq autocompletado prueba1 
-    use{"ms-jpq/coq_nvim"}
+    --[[ use{"ms-jpq/coq_nvim"}
     use{"ms-jpq/coq.artifacts"}
-    use{"ms-jpq/coq.thirdparty"}
+    use{"ms-jpq/coq.thirdparty"} ]] -- comentarios al caso, le falta mucho xD
 
     -- dependencias
     use {"nvim-lua/plenary.nvim"}

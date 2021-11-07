@@ -1,5 +1,5 @@
-local vim = vim
-local coq = require("coq")
+-- local vim = vim
+-- local coq = require("coq")
 -- local lsp = require("lspconfig")
 local lsp_installer = require("nvim-lsp-installer")
 
