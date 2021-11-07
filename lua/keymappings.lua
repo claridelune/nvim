@@ -1,7 +1,16 @@
+-- Maapping helper
 local mapper = function(mode, key, result)
 	vim.api.nvim_set_keymap(mode, key, result, {noremap = true, silent = true})
   end
-
+-- Expressive Mapping helper
+local expressive_mapper = function(mode, key, result)
+  vim.api.nvim_set_keymap(mode, key, result, { silent = true, expr = true })
+end
+-- Default Mapping helper
+local plug_mapper = function(mode, key, result)
+  vim.api.nvim_set_keymap(mode, key, result, {})
+end
+--
 -- Define Mapleader
 vim.g.mapleader = " "
 
@@ -60,3 +69,23 @@ mapper("n", "<leader>fb", ":Telescope buffers	<CR>")
 mapper("n", "<leader>fh", ":Telescope help_tags<CR>")
 mapper("n", ",v", ":lua require('plugins.telescope').search_dotfiles()<CR>")
 mapper("n", ",p", ":Telescope media_files<CR>")
+
+-- Coc.nvim
+mapper('n', '<F12>', ':CocCommand terminal.Toggle<CR>')
+mapper('n', '<F3>', ':Format<CR>')
+
+plug_mapper('n', '<leader>rn', '<Plug>(coc-rename)')
+
+plug_mapper('n', 'gd', '<Plug>(coc-definition)')
+plug_mapper('n', 'gr', '<Plug>(coc-references)')
+
+plug_mapper('n', '<leader>ca', '<Plug>(coc-codeaction)')
+plug_mapper('n', '<leader>ga', '<Plug>(coc-codeaction-cursor)')
+plug_mapper('x', '<leader>ga', '<Plug>(coc-codeaction-selected)')
+plug_mapper('n', '<leader>kf', '<Plug>(coc-fix-current)')
+
+plug_mapper('n', '<Right>', '<Plug>(coc-diagnostic-prev)')
+plug_mapper('n', '<Left>', '<Plug>(coc-diagnostic-next)')
+
+expressive_mapper('i', '<C-space>', 'coc#refresh()')
+

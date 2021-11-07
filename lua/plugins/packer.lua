@@ -18,6 +18,13 @@ return require("packer").startup(
     use{"ms-jpq/coq.artifacts"}
     use{"ms-jpq/coq.thirdparty"} ]] -- comentarios al caso, le falta mucho xD
 
+    -- coc, otra prueba de autocempletacion
+    use({
+        'neoclide/coc.nvim',
+        branch = 'master',
+        run = 'yarn install --frozen-lockfile',
+    })
+
     -- dependencias
     use {"nvim-lua/plenary.nvim"}
     use {"nvim-lua/popup.nvim"}
