@@ -1,4 +1,6 @@
 -- Maapping helper
+
+--
 local mapper = function(mode, key, result)
 	vim.api.nvim_set_keymap(mode, key, result, {noremap = true, silent = true})
   end
@@ -13,14 +15,18 @@ end
 --
 -- Define Mapleader
 vim.g.mapleader = " "
+--
 
 --Save and close
 mapper("n", "<Leader>ww", ":w!<CR>")
 mapper("n", "<Leader>qq", ":q<CR>")
 -- mapper("n", "<Leader>qq", ":q!<CR>")
 
---Duplicate line 
+--Duplicate line
 mapper("n", "tt", ":t.<CR>")
+
+-- Get out of the Terminal
+mapper('t', '<Esc>', '<C-\\><C-n>')
 
 -- Change Buffer
 mapper("n", "<C-M>", ":bnext<CR>")
@@ -69,7 +75,9 @@ mapper("n", "<leader>fb", ":Telescope buffers	<CR>")
 mapper("n", "<leader>fh", ":Telescope help_tags<CR>")
 mapper("n", ",v", ":lua require('plugins.telescope').search_dotfiles()<CR>")
 mapper("n", ",p", ":Telescope media_files<CR>")
-
+--
+-- Tree
+mapper('n', '<C-n>', ':NvimTreeToggle<CR>')
 -- Coc.nvim
 mapper('n', '<F12>', ':CocCommand terminal.Toggle<CR>')
 mapper('n', '<F3>', ':Format<CR>')
@@ -89,3 +97,8 @@ plug_mapper('n', '<Left>', '<Plug>(coc-diagnostic-next)')
 
 expressive_mapper('i', '<C-space>', 'coc#refresh()')
 
+-- Pass to Lua
+vim.cmd([[
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+]])

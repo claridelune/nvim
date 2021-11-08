@@ -1,4 +1,7 @@
 {
+// Lua
+  "Lua.diagnostics.globals": ["vim"],
+
 "languageserver": {
   "ccls": {
     "command": "ccls",
@@ -73,4 +76,9 @@
   // CoC
   "coc.preferences.colorSupport": true,
   "coc.preferences.formatOnType": true,
+// Diagnostic Sever
+  "diagnostic-languageserver.formatFiletypes": {
+    "cpp": "clangd",
+    "lua": "lua-format"
+  }
 }

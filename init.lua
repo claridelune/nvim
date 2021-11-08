@@ -1,4 +1,4 @@
-require ('packer')
+-- require ('packer')
 -- import all settings
 require("settings")
 --require("settings/aesthetic")
@@ -13,5 +13,5 @@ require("plugins")
 
 -- lsp (Lenguage server provider)
 -- require("lsp")
-
 require("lsp-config")
+

@@ -48,7 +48,8 @@ g.dashboard_custom_section = {
   },
   e = {
     description = { "  Edit Configuration         SPC d c" },
-    command = "e ~/AppData/Local/nvim",
+    command = ':e ~/.config/nvim/init.lua'
+    -- command = "e ~/AppData/Local/nvim",
   },
 }
 

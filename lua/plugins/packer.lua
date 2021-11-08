@@ -28,10 +28,17 @@ return require("packer").startup(
     -- dependencias
     use {"nvim-lua/plenary.nvim"}
     use {"nvim-lua/popup.nvim"}
+
     -- comentarios 
     use {'b3nj5m1n/kommentary'}
     -- lalinea de abajo
     use {"hoob3rt/lualine.nvim"}
+    
+    use({
+        'kyazdani42/nvim-tree.lua',
+        requires = { 'kyazdani42/nvim-web-devicons' },
+    })
+
     -- temas
     use {'marko-cerovac/material.nvim', opt = false, as = 'material'}
     use {'navarasu/onedark.nvim'}
