@@ -27,12 +27,17 @@ mapper("n", "tt", ":t.<CR>")
 
 -- Get out of the Terminal
 mapper('t', '<Esc>', '<C-\\><C-n>')
+mapper("n", "<Leader>tt", ":terminal<CR>")
 
 -- Change Buffer
 mapper("n", "<C-M>", ":bnext<CR>")
 mapper("n", "<C-N>", ":bprev<CR>")
 mapper("n", "<TAB>", ":bnext<CR>")
 mapper("n", "<S-TAB>", ":bprevious<CR>")
+
+-- delete buffer
+mapper("n", "<Leader>qb", ":bd<CR>")
+mapper("n", "<Leader>qw", ":bw<CR>")
 
 -- Resize with arrows
 mapper("n", "<C-Up>", ":resize -2<CR>")
