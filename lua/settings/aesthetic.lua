@@ -1,5 +1,6 @@
 local o = vim.o
 local wo = vim.wo
+local g = vim.g
 -- imprime el numero de linea del cursor
 wo.number = true
 o.number = true
@@ -25,7 +26,7 @@ o.splitright = true
 o.termguicolors = true
 
 --colorschme
---vim.cmd("colorscheme OceanicNext")
+-- vim.cmd("colorscheme OceanicNext")
 vim.cmd("colorscheme onedark")
 
 --background (default)
@@ -46,3 +47,6 @@ vim.o.expandtab = true
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 
+-- OceanicNext
+g.oceanic_next_terminal_bold = 1
+g.oceanic_next_terminal_italic = 1

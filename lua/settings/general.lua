@@ -19,6 +19,8 @@ o.updatetime = 250
 -- redibujar panatalla con solo los cambios
 o.lazyredraw = true
 
+-- disable by default
+g.transparent_enabled = false;
 
 
-
+g.airline_theme='oceanicnext'

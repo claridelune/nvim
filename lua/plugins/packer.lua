@@ -33,7 +33,7 @@ return require("packer").startup(
     use {'b3nj5m1n/kommentary'}
     -- lalinea de abajo
     use {"hoob3rt/lualine.nvim"}
-    
+
     use({
         'kyazdani42/nvim-tree.lua',
         requires = { 'kyazdani42/nvim-web-devicons' },
@@ -42,6 +42,8 @@ return require("packer").startup(
     -- temas
     use {'marko-cerovac/material.nvim', opt = false, as = 'material'}
     use {'navarasu/onedark.nvim'}
+    use {'mhartington/oceanic-next'}
+    use {'xiyaowong/nvim-transparent'}
     -- telescope
     use {
 	'nvim-telescope/telescope.nvim',

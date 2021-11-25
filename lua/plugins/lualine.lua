@@ -2,10 +2,12 @@ require('lualine').setup({
   options = {
     icons_enabled = true,
     theme = "onedark",
-    --theme = "material-nvim"
+    -- theme = "material-nvim",
+    -- theme = "OceanicNext",
     component_separators = { '', '' },
     section_separators = { '', '' },
     disabled_filetypes = {},
+
   },
   sections = {
     lualine_a = { 'mode' },
