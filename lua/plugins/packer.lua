@@ -38,6 +38,8 @@ return require("packer").startup(
         'kyazdani42/nvim-tree.lua',
         requires = { 'kyazdani42/nvim-web-devicons' },
     })
+    -- Sintax Highlighting
+    use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
 
     -- temas
     use {'marko-cerovac/material.nvim', opt = false, as = 'material'}
