@@ -26,7 +26,8 @@ o.splitright = true
 o.termguicolors = true
 
 --colorschme
-vim.cmd("colorscheme material")
+-- vim.cmd("colorscheme material")
+vim.cmd("colorscheme ayu")
 --[[ vim.cmd("colorscheme OceanicNext")
 vim.cmd("colorscheme onedark") ]]
 
@@ -46,7 +47,7 @@ wo.cursorline = true
 
 vim.o.expandtab = true
 vim.o.tabstop = 2
-vim.o.shiftwidth = 4
+vim.o.shiftwidth = 2
 
 -- OceanicNext
 g.oceanic_next_terminal_bold = 1

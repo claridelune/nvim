@@ -44,6 +44,7 @@ return require("packer").startup(
     use {'navarasu/onedark.nvim'}
     use {'mhartington/oceanic-next'}
     use {'xiyaowong/nvim-transparent'}
+    use {'Shatur/neovim-ayu'}
     -- telescope
     use {
 	'nvim-telescope/telescope.nvim',
