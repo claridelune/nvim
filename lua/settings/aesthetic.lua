@@ -26,10 +26,11 @@ o.splitright = true
 o.termguicolors = true
 
 --colorschme
--- vim.cmd("colorscheme material")
 vim.cmd("colorscheme ayu")
---[[ vim.cmd("colorscheme OceanicNext")
-vim.cmd("colorscheme onedark") ]]
+vim.cmd("colorscheme onedark")
+vim.cmd("colorscheme OceanicNext")
+-- vim.cmd("colorscheme material")
+-- vim.cmd("colorscheme space-vim-dark")
 
 --background (default)
 o.background = "dark"
@@ -38,7 +39,7 @@ o.background = "dark"
 o.emoji = true
 
 --resalta la linea 
-wo.cursorline = true
+-- wo.cursorline = true
 
 --o.clipboard = "unnamedplus"
 

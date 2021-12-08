@@ -39,6 +39,10 @@ require('nvim-tree').setup({
   disable_netrw = true,
   hijack_netrw = true,
 
+  options = {
+    theme = "space-vim-dark",
+  },
+
   diagnostics = {
     enable = false,
     icons = {

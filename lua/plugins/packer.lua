@@ -47,6 +47,8 @@ return require("packer").startup(
     use {'mhartington/oceanic-next'}
     use {'xiyaowong/nvim-transparent'}
     use {'Shatur/neovim-ayu'}
+    -- use {'folke/tokyonight.nvim'}
+    -- use {'gruvbox-community/gruvbox'}
     -- telescope
     use {
 	'nvim-telescope/telescope.nvim',

@@ -6,7 +6,7 @@ require('lualine').setup({
     theme = "ayu",
     -- theme = "material",
     -- theme = "OceanicNext",
-    -- theme = 'auto',
+    -- theme = "auto",
     component_separators = { '', '' },
     section_separators = { '', '' },
     disabled_filetypes = {},
