@@ -81,4 +81,6 @@
     "cpp": "clangd",
     "lua": "lua-format"
   }
+  // Emmet
+  "emmet.includeLanguages": { "javascript": "javascriptreact" },
 }

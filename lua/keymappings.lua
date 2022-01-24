@@ -57,7 +57,7 @@ mapper("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>")
 mapper("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>")
 mapper("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>")
 mapper("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>")
-mapper("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>")
+mapper("n", "<space>k", "<cmd>lua vim.lsp.buf.signature_help()<CR>")
 mapper("n", "<space>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>")
 mapper("n", "<space>wr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>")
 mapper("n", "<space>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>")
@@ -105,5 +105,8 @@ expressive_mapper('i', '<C-space>', 'coc#refresh()')
 -- Pass to Lua
 vim.cmd([[
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 ]])

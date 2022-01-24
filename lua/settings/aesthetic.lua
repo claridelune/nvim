@@ -27,8 +27,8 @@ o.termguicolors = true
 
 --colorschme
 vim.cmd("colorscheme ayu")
-vim.cmd("colorscheme onedark")
 vim.cmd("colorscheme OceanicNext")
+vim.cmd("colorscheme onedark")
 -- vim.cmd("colorscheme material")
 -- vim.cmd("colorscheme space-vim-dark")
 
