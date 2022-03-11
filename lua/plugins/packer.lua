@@ -21,8 +21,7 @@ return require("packer").startup(
     -- coc, otra prueba de autocempletacion
     use({
         'neoclide/coc.nvim',
-        branch = 'master',
-        run = 'yarn install --frozen-lockfile',
+        branch = 'release',
     })
 
     -- dependencias
