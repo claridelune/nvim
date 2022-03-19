@@ -1,22 +1,26 @@
 {
-// Lua
+  // Python
+  "python.formatting.provider": "black",
+  "python.linting.mypyEnabled": true,
+  "python.linting.pylintEnabled": true,
+  // Lua
   "Lua.diagnostics.globals": ["vim"],
 
-"languageserver": {
+  "languageserver": {
   "ccls": {
     "command": "ccls",
     "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
-    "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+    "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/", ".vim/"],
     "initializationOptions": {
         "cache": {
           "directory": "/tmp/ccls"
         }
       }
   }
-},
-"clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd",
-// Completion Icons,
-"suggest.completionItemKindLabels": {
+  },
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd",
+  // Completion Icons,
+  "suggest.completionItemKindLabels": {
     "method": "  ",
     "function": "  ",
     "variable": "[]",
@@ -76,7 +80,7 @@
   // CoC
   "coc.preferences.colorSupport": true,
   "coc.preferences.formatOnType": true,
-// Diagnostic Sever
+  // Diagnostic Sever
   "diagnostic-languageserver.formatFiletypes": {
     "cpp": "clangd",
     "lua": "lua-format"
