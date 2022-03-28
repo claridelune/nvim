@@ -24,6 +24,9 @@ return require("packer").startup(
         branch = 'release',
     })
 
+    -- Vimtex
+    use {"lervag/vimtex"}
+
     -- dependencias
     use {"nvim-lua/plenary.nvim"}
     use {"nvim-lua/popup.nvim"}

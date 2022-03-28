@@ -17,6 +17,22 @@
             "directory": "/tmp/ccls"
           }
         }
+    },
+    "latex": {
+            "command": "java",
+            "args": [
+                    "$HOME/.cargo/bin/texlab"
+            ],
+            // not start server at home directory, since it won't work.
+            "ignoredRootPaths": [
+                    "~"
+            ],
+            "filetypes": [
+                    "tex",
+                    "bib",
+                    "plaintex",
+                    "context"
+            ]
     }
   },
   "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd",
@@ -56,6 +72,7 @@
 
   "coc.source.file.priority": 60,
   "coc.source.buffer.priority": 50,
+  "coc.source.vimtex": true,
   "yank.priority": 10,
   "suggest.triggerCompletionWait": 30,
 
@@ -85,6 +102,7 @@
   // Diagnostic Sever
   "diagnostic-languageserver.formatFiletypes": {
     "cpp": "clangd",
+    "latex": "texlab",
     "lua": "lua-format",
     "zsh": "shfmt"
   },
