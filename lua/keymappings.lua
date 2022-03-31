@@ -51,6 +51,10 @@ mapper("n", "<C-j>", "<C-w>j")
 mapper("n", "<C-k>", "<C-w>k")
 mapper("n", "<C-l>", "<C-w>l")
 
+-- orthography
+mapper("n", "<leader>eng", ":setlocal spell! spelllang=en_us<CR>")
+mapper("n", "<leader>esp", ":setlocal spell! spelllang=es<CR>")
+
 -- LSP
 mapper("n", "<Leader>s", ":LspInfo<CR>")
 mapper("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>")

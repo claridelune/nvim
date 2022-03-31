@@ -16,5 +16,4 @@ vim.cmd([[
   set spell spelllang=en_us
   set spellfile=$HOME/.config/nvim/spell/en.utf-8.add
   inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
-  autocmd FileType tex setlocal ts=2 sw=2 sts=0 expandtab spell
 ]])
