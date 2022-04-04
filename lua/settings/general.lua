@@ -24,7 +24,7 @@ o.lazyredraw = true
 g.transparent_enabled = true;
 
 
--- g.airline_theme='onedark'
-g.airline_theme='ayu'
+g.airline_theme='onedark'
+-- g.airline_theme='tokyonight'
 
 opt.mouse = "a"

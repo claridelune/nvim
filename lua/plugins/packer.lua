@@ -27,6 +27,12 @@ return require("packer").startup(
     -- Vimtex
     use {"lervag/vimtex"}
 
+    -- Indent line
+    use {'lukas-reineke/indent-blankline.nvim'}
+
+    -- bufferline
+    use {'akinsho/bufferline.nvim'}
+
     -- dependencias
     use {"nvim-lua/plenary.nvim"}
     use {"nvim-lua/popup.nvim"}
@@ -49,7 +55,7 @@ return require("packer").startup(
     use {'mhartington/oceanic-next'}
     use {'xiyaowong/nvim-transparent'}
     use {'Shatur/neovim-ayu'}
-    -- use {'folke/tokyonight.nvim'}
+    use {'folke/tokyonight.nvim'}
     -- use {'gruvbox-community/gruvbox'}
     -- telescope
     use {

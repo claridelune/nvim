@@ -29,11 +29,17 @@ o.termguicolors = true
 vim.cmd("colorscheme ayu")
 vim.cmd("colorscheme OceanicNext")
 vim.cmd("colorscheme onedark")
+
+g.tokyonight_italic_functions = true
+g.tokyonight_dark_float = false
+g.tokyonight_italic_variables = true
+g.tokyonight_transparent = true
+g.tokyonight_transparent_sidebar = true
+vim.cmd("colorscheme tokyonight")
 -- vim.cmd("colorscheme material")
--- vim.cmd("colorscheme space-vim-dark")
 
 --background (default)
-o.background = "dark"
+-- o.background = "dark"
 
 -- emoji (no se si funcione en windows xd)
 o.emoji = true

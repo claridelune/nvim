@@ -39,10 +39,6 @@ require('nvim-tree').setup{
   open_on_setup = true,
   auto_close = false,
 
-  options = {
-    theme = "space-vim-dark",
-  },
-
   actions = {
     open_file = {
       resize_window = false,
@@ -83,4 +79,4 @@ require('nvim-tree').setup{
   },
 }
 
-vim.cmd('highlight NvimTreeFolderIcon guibg=blue')
+vim.cmd('highlight NvimTreeFolderIcon guibg=none')

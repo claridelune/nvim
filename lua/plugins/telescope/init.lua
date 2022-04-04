@@ -1,4 +1,5 @@
 local defaults = require("plugins.telescope.defaults")
+
 require("telescope").setup({
   defaults = defaults,
   extensions = {
@@ -17,4 +18,7 @@ require("telescope").setup({
   },
 })
 -- Load Telescope extensions
+vim.cmd[[hi TelescopeNormal guibg=none]]
+vim.cmd[[hi TelescopeBorder guibg=none]]
+
  require('telescope').load_extension('fzy_native')
