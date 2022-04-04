@@ -4,12 +4,17 @@ require("transparent").setup({
     -- In particular, when you set it to 'all', that means all avaliable groups
 
     -- example of akinsho/nvim-bufferline.lua
-    "BufferLineTabClose",
-    "BufferlineBufferSelected",
+    "StatusLineNC",
+    "StatusLine",
+    "NvimTreeStatusLine",
     "BufferLineFill",
+    "LualineFill"
+  },
+  exclude = {
+    "BufferLineTabClose",
     "BufferLineBackground",
+    "BufferlineBufferSelected",
     "BufferLineSeparator",
     "BufferLineIndicatorSelected",
-  },
-  exclude = {}, -- table: groups you don't want to clear
+  }, -- table: groups you don't want to clear
 })
