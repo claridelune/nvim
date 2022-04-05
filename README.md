@@ -1,4 +1,4 @@
-<h1 align="center"> Neovim own configuration </h1>💤
+<h1 align="center"> Neovim own configuration 💤</h1>
 
 <p align="center"> A simple Transparent configuration of Nvim </p>
 
