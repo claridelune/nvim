@@ -22,6 +22,17 @@ mapper("n", "<Leader>ww", ":w!<CR>")
 mapper("n", "<Leader>qq", ":q<CR>")
 -- mapper("n", "<Leader>qq", ":q!<CR>")
 
+-- Copy to OS clipboard.
+mapper('n', '<Leader>y', '"+y')
+mapper('v', '<Leader>y', '"+y')
+mapper('n', '<Leader>yy', '"+yy')
+
+-- Paste from OS clipboard
+mapper('n', '<Leader>p', '"+p')
+mapper('n', '<Leader>P', '"+P')
+mapper('v', '<Leader>p', '"+p')
+mapper('v', '<Leader>P', '"+P"`"`"')
+
 --Duplicate line
 mapper("n", "tt", ":t.<CR>")
 
@@ -55,41 +66,24 @@ mapper("n", "<C-l>", "<C-w>l")
 mapper("n", "<leader>eng", ":setlocal spell! spelllang=en_us<CR>")
 mapper("n", "<leader>esp", ":setlocal spell! spelllang=es<CR>")
 
--- LSP
-mapper("n", "<Leader>s", ":LspInfo<CR>")
-mapper("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>")
-mapper("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>")
-mapper("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>")
-mapper("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>")
-mapper("n", "<space>k", "<cmd>lua vim.lsp.buf.signature_help()<CR>")
-mapper("n", "<space>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>")
-mapper("n", "<space>wr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>")
-mapper("n", "<space>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>")
-mapper("n", "<space>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>")
-mapper("n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>")
-mapper("n", "<space>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>")
-mapper("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>")
-mapper("n", "<space>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>")
-mapper("n", "[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>")
-mapper("n", "]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>")
-mapper("n", "<space>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>")
-mapper("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>")
-
 -- Plugins Mappings ↓
 
 -- Telescope
-mapper("n", "<leader>fg", ":Telescope live_grep<CR>")
 mapper("n", "<leader>ff", ":Telescope find_files<CR>")
 mapper("n", "<leader>fb", ":Telescope buffers	<CR>")
 mapper("n", "<leader>fh", ":Telescope help_tags<CR>")
+mapper("n", "<leader>fi", ":Telescope live_grep<CR>")
+mapper("n", "<leader>fg", ":Telescope git_status<CR>")
+mapper("n", "<leader>fo", ":Telescope oldfiles<CR>")
+mapper("n", "<leader>fc", ":Telescope commands<CR>")
+mapper("n", "<leader>fz", ":Telescope current_buffer_fuzzy_find<CR>")
 mapper("n", ",v", ":lua require('plugins.telescope').search_dotfiles()<CR>")
 mapper("n", ",p", ":Telescope media_files<CR>")
 --
 -- Tree
 mapper('n', '<C-n>', ':NvimTreeToggle<CR>')
 -- Coc.nvim
-mapper('n', '<F12>', ':CocCommand terminal.Toggle<CR>')
-mapper('n', '<F3>', ':Format<CR>')
+mapper('n', '<F3>', ':CocCommand prettier.formatFile<CR>')
 
 plug_mapper('n', '<leader>rn', '<Plug>(coc-rename)')
 
