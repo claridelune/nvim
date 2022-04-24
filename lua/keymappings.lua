@@ -27,6 +27,9 @@ mapper('n', '<Leader>y', '"+y')
 mapper('v', '<Leader>y', '"+y')
 mapper('n', '<Leader>yy', '"+yy')
 
+-- Copy all to OS clipboard
+mapper('n', '<Leader>+y', ':%y+<CR>')
+
 -- Paste from OS clipboard
 mapper('n', '<Leader>p', '"+p')
 mapper('n', '<Leader>P', '"+P')
