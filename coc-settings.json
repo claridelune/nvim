@@ -3,6 +3,8 @@
   "python.formatting.provider": "black",
   "python.linting.mypyEnabled": true,
   "python.linting.pylintEnabled": true,
+   "python.linting.mypyPath": "~/.local/bin/mypy",
+   "python.linting.pylintPath": "~/.local/bin/pylint",
   // Lua
   "Lua.diagnostics.globals": ["vim"],
 
