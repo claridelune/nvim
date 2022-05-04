@@ -22,6 +22,10 @@ mapper("n", "<Leader>ww", ":w!<CR>")
 mapper("n", "<Leader>qq", ":q<CR>")
 -- mapper("n", "<Leader>qq", ":q!<CR>")
 
+-- Enter in normal mode
+mapper('n', "<Leader>O", ":<C-u>put!=repeat([''],v:count)<bar>']+1<CR>")
+mapper('n', "<Leader>o", ":<c-u>put =repeat([''],v:count)<bar>'[-1<cr>")
+
 -- Copy to OS clipboard.
 mapper('n', '<Leader>y', '"+y')
 mapper('v', '<Leader>y', '"+y')
