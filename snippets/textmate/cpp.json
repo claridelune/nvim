@@ -1,0 +1,83 @@
+{
+    "cpp": {
+        "prefix": "cpp",
+        "body": [
+          "#include <iostream>",
+          "",
+          "using namespace std;",
+          "",
+          "int main() {",
+          "   $1",
+          "   cin.get();",
+          "   return 0;",
+          "}"
+        ],
+        "description": "C++ quick start"
+    },
+    "g++": {
+        "prefix": "g++",
+        "body": [
+            "#include <bits/stdc++.h>  // This will work only for g++ compiler.",
+            "#define for0(i, n) for (int i = 0; i < (int)(n); ++i)",
+            "#define for1(i, n) for (int i = 1; i <= (int)(n); ++i)",
+            "#define wiii()      (ios_base:: sync_with_stdio(false),cin.tie(NULL));",
+            "",
+            "using namespace std;",
+            "",
+            "typedef vector<int> vi;",
+            "typedef vector<vi> vvi;",
+            "typedef pair<int, int> ii;",
+            "typedef vector<ii> vii;",
+            "typedef long long ll;",
+            "typedef vector<ll> vll;",
+            "typedef vector<vll> vvll;",
+            "typedef double ld;",
+            "",
+            "",
+            "int main() {",
+            "   $1",
+            "   wiii();",
+            "   cout.precision(10);",
+            "   cout << fixed;",
+            "   return 0;",
+            "}"
+        ],
+        "description": "C++ g++ template"
+    },
+    "iostream": {
+        "prefix" : "iostream",
+        "body": [
+            "#include <iostream>",
+            "#include <vector>",
+            "",
+            "#define for0(i, n) for (int i = 0; i < (int)(n); ++i)",
+            "#define for1(i, n) for (int i = 1; i <= (int)(n); ++i)",
+            "#define wiii()      (ios_base:: sync_with_stdio(false),cin.tie(NULL));",
+            "#define test(t)     int t; cin >> t; while(t--)",
+            "#define endl        '\\n'",
+            "",
+            "using namespace std;",
+            "",
+            "typedef vector<int> vi;",
+            "typedef vector<vi> vvi;",
+            "typedef pair<int, int> ii;",
+            "typedef vector<ii> vii;",
+            "typedef long long ll;",
+            "typedef vector<ll> vll;",
+            "typedef vector<vll> vvll;",
+            "typedef long double ld;",
+            "",
+            "void solve() {",
+            "   $1",
+            "}",
+            "",
+            "int main() {",
+            "   wiii();",
+            "   test(t)",
+            "       solve();",
+            "   return 0;",
+            "}"
+        ],
+        "description": "iostream template CP"
+    }
+}
