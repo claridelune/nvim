@@ -4,7 +4,10 @@ require("bufferline").setup({
     show_close_icon = true,
     always_show_bufferline = false,
     diagnostics = {"nvim_lsp", "coc",},
-    indicator_icon = '| ',
+    indicator = {
+      style = 'icon',
+      icon = '|',
+    },
     modified_icon = '●',
     close_icon = '',
     left_trunc_marker = '',

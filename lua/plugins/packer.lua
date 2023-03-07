@@ -3,12 +3,12 @@ return require("packer").startup(
     use {"wbthomason/packer.nvim"}
 
     -- Lsp (tengo miedo)
-    use {'neovim/nvim-lspconfig'}
+    --use {'neovim/nvim-lspconfig'}
     --[[ use {
         'neovim/nvim-lspconfig',
         config = function() require'plugins.lsp' end
     } ]]
-    use{"glepnir/lspsaga.nvim"} -- 1 de 6(?
+    -- use{"glepnir/lspsaga.nvim"} -- 1 de 6(?
     -- use{"kabouzeid/nvim-lspinstall"} -- no me funciono en windows
     use{"williamboman/nvim-lsp-installer"} --amen
 
@@ -47,7 +47,14 @@ return require("packer").startup(
         requires = { 'kyazdani42/nvim-web-devicons' },
     })
     -- Sintax Highlighting
-    use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
+    -- use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end,
+    }
 
     -- temas
     use {'marko-cerovac/material.nvim', opt = false, as = 'material'}
