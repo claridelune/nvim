@@ -36,8 +36,6 @@ vim.g.nvim_tree_icons = {
 require('nvim-tree').setup{
   disable_netrw = true,
   hijack_netrw = true,
-  open_on_startup = true,
-  auto_close = false,
 
   actions = {
     open_file = {
@@ -71,7 +69,6 @@ require('nvim-tree').setup{
   view = {
     width = 35,
     side = 'right',
-    auto_resize = false,
     mappings = {
       custom_only = false,
       list = {},
