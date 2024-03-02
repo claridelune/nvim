@@ -63,7 +63,7 @@ return require("packer").startup(
     use {'xiyaowong/nvim-transparent'}
     use {'Shatur/neovim-ayu'}
     use {'folke/tokyonight.nvim'}
-    -- use {'gruvbox-community/gruvbox'}
+    use {'gruvbox-community/gruvbox'}
     -- telescope
     use {
 	'nvim-telescope/telescope.nvim',

@@ -37,7 +37,7 @@
             ]
     }
   },
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd",
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.6/clangd_15.0.6/bin/clangd",
   // Completion Icons,
   "suggest.completionItemKindLabels": {
     "method": "  ",
@@ -61,9 +61,7 @@
     "color": "  ",
     "unit": " 塞 ",
     "snippet": " ",
-    "text": "  ",
-    "constructor": "  ",
-    "value": "  ",
+    "text": "  ", "constructor": "  ", "value": "  ",
     "enumMember": "  ",
     "default": "  "
   },
@@ -113,5 +111,16 @@
   "emmet.includeLanguages": { 
     "javascript": "javascriptreact",
     "svelte": "html"
-  }
+  },
+
+  // Snippets
+  "snippets.priority": 1,
+  "snippets.trace": "verbose",
+  "snippets.enableStatusItem": false,
+  "snippets.autoTrigger": true,
+  "snippets.loadFromExtensions": true,
+  "snippets.textmateSnippetsRoots": ["~/.config/nvim/snippets/textmate"],
+  "snippets.snipmate.enable": true,
+  "snippets.snipmate.author": "Camila Clari",
+  "snippets.ultisnips.pythonPrompt": false
 }

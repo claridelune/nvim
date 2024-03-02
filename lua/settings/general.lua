@@ -21,7 +21,7 @@ o.updatetime = 250
 o.lazyredraw = true
 
 -- disable by default
-g.transparent_enabled = true;
+g.transparent_enabled = false;
 
 
 g.airline_theme='onedark'
