@@ -28,7 +28,7 @@ return require("packer").startup(
     use {"lervag/vimtex"}
 
     -- Indent line
-    use {'lukas-reineke/indent-blankline.nvim'}
+    -- use {'lukas-reineke/indent-blankline.nvim'}
 
     -- bufferline
     use {'akinsho/bufferline.nvim'}

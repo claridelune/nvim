@@ -1,0 +1,20 @@
+{
+    "nixpkgs": {
+        "prefix": "nixpkgs",
+        "body": [
+            "{ pkgs ? import <nixpkgs> {} }:",
+            "",
+            "pkgs.mkShell {",
+            "  buildInputs = [",
+            "    pkgs.$1",
+            "  ];",
+            "",
+            "  shellHook = ''",
+            "    echo \"Nixpkgs environment initialized.\"",
+            "    alias hi=\"echo \"Hi\"\"",
+            "  '';",
+            "}"
+        ],
+        "description": "Nixpkgs shell environment configuration."
+    }
+}

@@ -26,22 +26,22 @@ o.splitright = true
 o.termguicolors = true
 
 --colorschme
-vim.cmd("colorscheme ayu")
+--[[ vim.cmd("colorscheme ayu")
 vim.cmd("colorscheme OceanicNext")
-vim.cmd("colorscheme onedark")
+vim.cmd("colorscheme onedark") ]]
 
---[[ g.tokyonight_italic_functions = true
+g.tokyonight_italic_functions = true
 g.tokyonight_dark_float = false
 g.tokyonight_italic_variables = true
 g.tokyonight_transparent = true
-g.tokyonight_transparent_sidebar = true ]]
+g.tokyonight_transparent_sidebar = true
 vim.cmd("colorscheme tokyonight")
 
-vim.cmd("colorscheme gruvbox")
+--vim.cmd("colorscheme gruvbox") ]]
 -- vim.cmd("colorscheme material")
 
 --background (default = dark,| light)
-o.background = "dark"
+-- o.background = "light"
 
 -- emoji (no se si funcione en windows xd)
 o.emoji = true
@@ -55,8 +55,8 @@ o.emoji = true
 --o.lazyredraw = true
 
 vim.o.expandtab = true
-vim.o.tabstop = 4
-vim.o.shiftwidth = 4
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
 
 -- OceanicNext
 g.oceanic_next_terminal_bold = 1

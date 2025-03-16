@@ -1,0 +1,295 @@
+{
+    "Log": {
+      "prefix": "log",
+      "body": ["console.log($0);"],
+      "description": "Log"
+    },
+    "Log a string": {
+      "prefix": "logs",
+      "body": ["console.log('$0');"],
+      "description": "Log string"
+    },
+    "Log an object": {
+      "prefix": "logo",
+      "body": ["console.log('$1 :', JSON.stringify($1));"],
+      "description": "Log object"
+    },
+    "JSON.stringify()": {
+      "prefix": "json",
+      "body": ["JSON.stringify($0)"],
+      "description": "JSON.stringify()"
+    },
+    "JSON.parse()": {
+      "prefix": "jsonp",
+      "body": ["JSON.parse($0)"],
+      "description": "JSON.parse()"
+    },
+    "Arrow Function": {
+      "prefix": "af",
+      "body": [
+        "const $1 = ($2) => {",
+        "  $3",
+        "}"
+      ],
+      "description": "Arrow Function"
+    },
+    "Import Custom Hooks": {
+      "prefix": "ch",
+      "body": [
+        "const { $2 } = ${1:customHook}"
+      ],
+      "description": "Import a Custom Hook"
+    },
+    "Import React with useEffect and useState": {
+      "prefix": "i uef & ust",
+      "body": [
+        "import React, { useEffect, useState } from 'react';"
+      ],
+      "description": "Import React with useEffect and useState"
+    },
+    "Import React with useState": {
+      "prefix": "i ust",
+      "body": [
+        "import React, { useState } from 'react';"
+      ],
+      "description": "Import React with useState"
+    },
+    "Import React with useEffect": {
+      "prefix": "i uef",
+      "body": [
+        "import React, { useEffect } from 'react';"
+      ],
+      "description": "Import React with useEffect"
+    },
+    "Import React with useContext": {
+      "prefix": "i uctx",
+      "body": [
+        "import React, { useContext } from 'react';"
+      ],
+      "description": "Import React with useContext"
+    },
+    "Import React with useReducer": {
+      "prefix": "i urd",
+      "body": [
+        "import React, { useReducer } from 'react';"
+      ],
+      "description": "Import React with useReducer"
+    },
+    "useState Hook": {
+      "prefix": "ust",
+      "body": [
+        "const [${1:data}, set${1/(.*)/${1:/capitalize}/}] = useState(${2:null});"
+      ],
+      "description": "useState Hook"
+    },
+    "useEffect Hook": {
+      "prefix": "uef",
+      "body": [
+        "useEffect(() => {",
+        "  ${1:// effect}",
+        "  return () => {",
+        "    ${2:// cleanup}",
+        "  };",
+        "}, [${3:}]);"
+      ],
+      "description": "useEffect Hook"
+    },
+    "useContext Hook": {
+      "prefix": "uctx",
+      "body": [
+        "const ${1:value} = useContext(${2:Context});"
+      ],
+      "description": "useContext Hook"
+    },
+    "useReducer Hook": {
+      "prefix": "urd",
+      "body": [
+        "const [${1:state}, ${2:dispatch}] = useReducer(${3:reducer}, ${4:initialState});"
+      ],
+      "description": "useReducer Hook"
+    },
+    "useCallback Hook": {
+      "prefix": "ucb",
+      "body": [
+        "const ${1:callback} = useCallback(() => {",
+        "  ${2:// callback}",
+        "}, [${3:}]);"
+      ],
+      "description": "useCallback Hook"
+    },
+    "useMemo Hook": {
+      "prefix": "um",
+      "body": [
+        "const ${1:computedValue} = useMemo(() => ${2:value}, [${3:}]);"
+      ],
+      "description": "useMemo Hook"
+    },
+    "Functional Component": {
+      "prefix": "rfc",
+      "body": [
+        "import React from 'react';",
+        "",
+        "const ${1:ComponentName} = () => {",
+        "  return (",
+        "    <div>",
+        "      ${2:/* content */}",
+        "    </div>",
+        "  );",
+        "};",
+        "",
+        "export default ${1:ComponentName};"
+      ],
+      "description": "Functional Component"
+    },
+    "Functional Component with useState": {
+      "prefix": "rfcu",
+      "body": [
+        "import React, { useState } from 'react';",
+        "",
+        "const ${1:ComponentName} = () => {",
+        "  const [${2:data}, set${2/(.*)/${1:/capitalize}/}] = useState(${3:null});",
+        "",
+        "  return (",
+        "    <div>",
+        "      ${4:/* content */}",
+        "    </div>",
+        "  );",
+        "};",
+        "",
+        "export default ${1:ComponentName};"
+      ],
+      "description": "Functional Component with useState"
+    },
+    "Functional Component with useEffect": {
+      "prefix": "rfce",
+      "body": [
+        "import React, { useEffect } from 'react';",
+        "",
+        "const ${1:ComponentName} = () => {",
+        "  useEffect(() => {",
+        "    ${2:// effect}",
+        "    return () => {",
+        "      ${3:// cleanup}",
+        "    };",
+        "  }, []);",
+        "",
+        "  return (",
+        "    <div>",
+        "      ${4:/* content */}",
+        "    </div>",
+        "  );",
+        "};",
+        "",
+        "export default ${1:ComponentName};"
+      ],
+      "description": "Functional Component with useEffect"
+    },
+    "Functional Component with useState and useEffect": {
+      "prefix": "rfusue",
+      "body": [
+        "import React, { useState, useEffect } from 'react';",
+        "",
+        "const ${1:ComponentName} = () => {",
+        "  const [${2:data}, set${2/(.*)/${1:/capitalize}/}] = useState(${3:null});",
+        "",
+        "  useEffect(() => {",
+        "    ${4:// effect}",
+        "    return () => {",
+        "      ${5:// cleanup}",
+        "    };",
+        "  }, []);",
+        "",
+        "  return (",
+        "    <div>",
+        "      ${6:/* content */}",
+        "    </div>",
+        "  );",
+        "};",
+        "",
+        "export default ${1:ComponentName};"
+      ],
+      "description": "Functional Component with useState and useEffect"
+    },
+    "Return Statement": {
+      "prefix": "ret",
+      "body": [
+        "return (",
+        "  <div>",
+        "    ${1:/* content */}",
+        "  </div>",
+        ");"
+      ],
+      "description": "Return Statement"
+    },
+    "Map Function": {
+      "prefix": "map",
+      "body": [
+        "{${1:data}.map((${2:item}, ${3:index}) => (",
+        "  <div key={${3:index}}>${4:${2:item}}</div>",
+        "))}"
+      ],
+      "description": "Map Function"
+    },
+    "Import PropTypes": {
+      "prefix": "i pt",
+      "body": [
+        "import PropTypes from 'prop-types';"
+      ],
+      "description": "Import PropTypes"
+    },
+    "PropTypes Object": {
+      "prefix": "pt obj",
+      "body": [
+        "ComponentName.propTypes = {",
+        "  ${1:propName}: PropTypes.object.isRequired,",
+        "};"
+      ],
+      "description": "PropTypes Object"
+    },
+    "PropTypes Array": {
+      "prefix": "pt arr",
+      "body": [
+        "ComponentName.propTypes = {",
+        "  ${1:propName}: PropTypes.array.isRequired,",
+        "};"
+      ],
+      "description": "PropTypes Array"
+    },
+    "PropTypes String": {
+      "prefix": "pt str",
+      "body": [
+        "ComponentName.propTypes = {",
+        "  ${1:propName}: PropTypes.string.isRequired,",
+        "};"
+      ],
+      "description": "PropTypes String"
+    },
+    "PropTypes Number": {
+      "prefix": "pt num",
+      "body": [
+        "ComponentName.propTypes = {",
+        "  ${1:propName}: PropTypes.number.isRequired,",
+        "};"
+      ],
+      "description": "PropTypes Number"
+    },
+    "PropTypes Bool": {
+      "prefix": "pt bool",
+      "body": [
+        "ComponentName.propTypes = {",
+        "  ${1:propName}: PropTypes.bool.isRequired,",
+        "};"
+      ],
+      "description": "PropTypes Bool"
+    },
+    "PropTypes Function": {
+      "prefix": "pt func",
+      "body": [
+        "ComponentName.propTypes = {",
+        "  ${1:propName}: PropTypes.func.isRequired,",
+        "};"
+      ],
+      "description": "PropTypes Function"
+    }
+  }
+  

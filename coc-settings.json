@@ -37,7 +37,7 @@
             ]
     }
   },
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.6/clangd_15.0.6/bin/clangd",
+  // "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/18.1.3/clangd_18.1.3/bin/clangd",
   // Completion Icons,
   "suggest.completionItemKindLabels": {
     "method": "  ",
@@ -118,6 +118,7 @@
   "snippets.trace": "verbose",
   "snippets.enableStatusItem": false,
   "snippets.autoTrigger": true,
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snippets/ultisnippets",
   "snippets.loadFromExtensions": true,
   "snippets.textmateSnippetsRoots": ["~/.config/nvim/snippets/textmate"],
   "snippets.snipmate.enable": true,

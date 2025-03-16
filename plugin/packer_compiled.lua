@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/clari/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/clari/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/clari/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/clari/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/clari/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/clari/.cache/nvim/packer_hererocks/2.1.1713773202/share/lua/5.1/?.lua;/home/clari/.cache/nvim/packer_hererocks/2.1.1713773202/share/lua/5.1/?/init.lua;/home/clari/.cache/nvim/packer_hererocks/2.1.1713773202/lib/luarocks/rocks-5.1/?.lua;/home/clari/.cache/nvim/packer_hererocks/2.1.1713773202/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/clari/.cache/nvim/packer_hererocks/2.1.1713773202/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -91,6 +91,11 @@ _G.packer_plugins = {
     only_cond = false,
     path = "/home/clari/.local/share/nvim/site/pack/packer/opt/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
+  },
+  gruvbox = {
+    loaded = true,
+    path = "/home/clari/.local/share/nvim/site/pack/packer/start/gruvbox",
+    url = "https://github.com/gruvbox-community/gruvbox"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
@@ -193,6 +198,27 @@ time([[Defining packer_plugins]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
+pcall(vim.api.nvim_create_user_command, 'DashboardFindFile', function(cmdargs)
+          require('packer.load')({'dashboard-nvim'}, { cmd = 'DashboardFindFile', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'dashboard-nvim'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('DashboardFindFile ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'DashboardFindHistory', function(cmdargs)
+          require('packer.load')({'dashboard-nvim'}, { cmd = 'DashboardFindHistory', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'dashboard-nvim'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('DashboardFindHistory ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'DashboardFindWord', function(cmdargs)
+          require('packer.load')({'dashboard-nvim'}, { cmd = 'DashboardFindWord', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'dashboard-nvim'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('DashboardFindWord ', 'cmdline')
+      end})
 pcall(vim.api.nvim_create_user_command, 'DashboardJumpMarks', function(cmdargs)
           require('packer.load')({'dashboard-nvim'}, { cmd = 'DashboardJumpMarks', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
         end,
@@ -220,27 +246,6 @@ pcall(vim.api.nvim_create_user_command, 'DashboardChangeColorscheme', function(c
         {nargs = '*', range = true, bang = true, complete = function()
           require('packer.load')({'dashboard-nvim'}, {}, _G.packer_plugins)
           return vim.fn.getcompletion('DashboardChangeColorscheme ', 'cmdline')
-      end})
-pcall(vim.api.nvim_create_user_command, 'DashboardFindFile', function(cmdargs)
-          require('packer.load')({'dashboard-nvim'}, { cmd = 'DashboardFindFile', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'dashboard-nvim'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('DashboardFindFile ', 'cmdline')
-      end})
-pcall(vim.api.nvim_create_user_command, 'DashboardFindHistory', function(cmdargs)
-          require('packer.load')({'dashboard-nvim'}, { cmd = 'DashboardFindHistory', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'dashboard-nvim'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('DashboardFindHistory ', 'cmdline')
-      end})
-pcall(vim.api.nvim_create_user_command, 'DashboardFindWord', function(cmdargs)
-          require('packer.load')({'dashboard-nvim'}, { cmd = 'DashboardFindWord', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'dashboard-nvim'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('DashboardFindWord ', 'cmdline')
       end})
 time([[Defining lazy-load commands]], false)
 

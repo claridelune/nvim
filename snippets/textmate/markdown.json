@@ -1,0 +1,20 @@
+{
+    "markdown": {
+        "prefix": "idea",
+        "body": [
+            "{{date:YYYYMMDD}} {{time:HHmm}}",
+            "$1",
+            "Status: #idea",
+            "",
+            "Tags:",
+            "",
+            "# $2",
+            "",
+            "---",
+            "",
+            "# References",
+            "- ",
+        ],
+        "description": "Markdown template for IDEAS in Obsidian"
+    }
+}
