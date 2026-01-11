@@ -7,23 +7,20 @@
 `$HOME/.config/nvim`
 
 ```
-├──  coc-settings.json
 ├──  init.lua
 ├──  lua
 │   ├──  keymappings.lua
 │   ├──  lsp
+│   │   ├──  handlers.lua
 │   │   ├──  init.lua
-│   │   ├──  lsp.lua
-│   │   ├──  servers
-│   │   │   ├──  clangd.lua
-│   │   │   ├──  init.lua
-│   │   │   ├──  main.py
-│   │   │   └──  pyright.lua
-│   │   └──  utils.lua
-│   ├──  lsp-config.lua
+│   │   └──  servers
+│   │       ├──  clangd.lua
+│   │       ├──  init.lua
+│   │       ├──  main.py
+│   │       └──  pyright.lua
 │   ├──  plugins
 │   │   ├──  bufferline.lua
-│   │   ├──  coc.lua
+│   │   ├──  cmp.lua
 │   │   ├──  dashboard.lua
 │   │   ├──  init.lua
 │   │   ├──  kommentary.lua

@@ -2,27 +2,26 @@ return require("packer").startup(
   function()
     use {"wbthomason/packer.nvim"}
 
-    -- Lsp (tengo miedo)
-    --use {'neovim/nvim-lspconfig'}
-    --[[ use {
-        'neovim/nvim-lspconfig',
-        config = function() require'plugins.lsp' end
-    } ]]
-    -- use{"glepnir/lspsaga.nvim"} -- 1 de 6(?
-    -- use{"kabouzeid/nvim-lspinstall"} -- no me funciono en windows
-    use{"williamboman/nvim-lsp-installer"} --amen
-
-
-    -- coq autocompletado prueba1 
-    --[[ use{"ms-jpq/coq_nvim"}
-    use{"ms-jpq/coq.artifacts"}
-    use{"ms-jpq/coq.thirdparty"} ]] -- comentarios al caso, le falta mucho xD
-
-    -- coc, otra prueba de autocempletacion
-    use({
-        'neoclide/coc.nvim',
-        branch = 'release',
-    })
+    -- LSP and completion
+    use { "neovim/nvim-lspconfig" }
+    use {
+      "williamboman/mason.nvim",
+      run = function()
+        pcall(vim.cmd, "MasonUpdate")
+      end,
+    }
+    use { "williamboman/mason-lspconfig.nvim" }
+    use {
+      "hrsh7th/nvim-cmp",
+      requires = {
+        "hrsh7th/cmp-nvim-lsp",
+        "hrsh7th/cmp-buffer",
+        "hrsh7th/cmp-path",
+        "saadparwaiz1/cmp_luasnip",
+        "L3MON4D3/LuaSnip",
+        "rafamadriz/friendly-snippets",
+      },
+    }
 
     -- Vimtex
     use {"lervag/vimtex"}

@@ -7,6 +7,6 @@ require("keymappings")
 -- Config of my Plugins
 require("plugins")
 
--- lsp (Lenguage server provider)
-require("lsp-config")
+-- LSP (Language Server Protocol)
+require("lsp").setup()
 

@@ -3,7 +3,7 @@ require("bufferline").setup({
     theme = "termguicolors",
     show_close_icon = true,
     always_show_bufferline = false,
-    diagnostics = {"nvim_lsp", "coc",},
+    diagnostics = {"nvim_lsp"},
     indicator = {
       style = 'icon',
       icon = '|',

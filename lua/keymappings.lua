@@ -89,31 +89,10 @@ mapper("n", ",p", ":Telescope media_files<CR>")
 --
 -- Tree
 mapper('n', '<C-n>', ':NvimTreeToggle<CR>')
--- Coc.nvim
-mapper('n', '<F3>', ':CocCommand prettier.formatFile<CR>')
+-- LSP helpers
+mapper('n', '<F3>', ':lua vim.lsp.buf.format({ async = true })<CR>')
 
-plug_mapper('n', '<leader>rn', '<Plug>(coc-rename)')
-
-plug_mapper('n', 'gd', '<Plug>(coc-definition)')
-plug_mapper('n', 'gr', '<Plug>(coc-references)')
-
-plug_mapper('n', '<leader>ca', '<Plug>(coc-codeaction)')
-plug_mapper('n', '<leader>ga', '<Plug>(coc-codeaction-cursor)')
-plug_mapper('x', '<leader>ga', '<Plug>(coc-codeaction-selected)')
-plug_mapper('n', '<leader>kf', '<Plug>(coc-fix-current)')
-
-plug_mapper('n', '<Right>', '<Plug>(coc-diagnostic-prev)')
-plug_mapper('n', '<Left>', '<Plug>(coc-diagnostic-next)')
-
-expressive_mapper('i', '<C-space>', 'coc#refresh()')
-
--- Pass to Lua
 vim.cmd([[
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
-
 autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -ulimit -Wall -Wno-unused-result -std=c++11   -O2   % -o %:r && ./%:r < ./inp.txt <CR>
 ]])
+

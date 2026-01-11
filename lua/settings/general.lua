@@ -8,7 +8,7 @@ o.synmaxcol = 1500 --maximos caracteres que va a cargar
 
 -- Fold stuff
 -- wo.foldenable = false
--- wo.foldnestmax = 10
+-- wo.foldnesthemeax = 10
 -- wo.foldmethod = "syntax"
 
 -- trabajar con bastantes buffers, borrar las notificaciones
